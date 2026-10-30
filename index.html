@@ -451,11 +451,210 @@
                 padding: 40px 20px;
             }
         }
+
+        
+        /* ---------- UNDER CONSTRUCTION OVERLAY ---------- */
+
+.construction-overlay {
+    position: fixed;
+    inset: 0;
+    z-index: 9999;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    padding: 20px;
+
+    background: rgba(4, 8, 5, 0.65);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+}
+
+.construction-card {
+    width: 100%;
+    max-width: 520px;
+
+    padding: 50px 35px;
+    text-align: center;
+
+    background: rgba(16, 21, 17, 0.88);
+    border: 1px solid rgba(167, 233, 197, 0.2);
+    border-radius: 20px;
+
+    box-shadow: 0 25px 100px rgba(0, 0, 0, 0.4);
+
+    animation: cardAppear 0.7s ease-out;
+}
+
+.construction-icon {
+    width: 65px;
+    height: 65px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    margin: 0 auto 25px;
+
+    background: rgba(167, 233, 197, 0.08);
+    border: 1px solid rgba(167, 233, 197, 0.25);
+    border-radius: 18px;
+
+    color: #a7e9c5;
+    font-size: 30px;
+}
+
+.construction-label {
+    display: block;
+
+    margin-bottom: 16px;
+
+    color: #a7e9c5;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 3px;
+}
+
+.construction-card h1 {
+    margin-bottom: 18px;
+
+    font-family: "Space Grotesk", sans-serif;
+    font-size: clamp(30px, 6vw, 46px);
+    line-height: 1.15;
+    letter-spacing: -1.5px;
+}
+
+.construction-card h1 span {
+    color: #a7e9c5;
+}
+
+.construction-card p {
+    max-width: 390px;
+
+    margin: 0 auto 25px;
+
+    color: #929a94;
+    font-size: 14px;
+    line-height: 1.9;
+}
+
+.construction-status {
+    display: inline-flex;
+    align-items: center;
+    gap: 9px;
+
+    padding: 9px 15px;
+
+    background: rgba(167, 233, 197, 0.06);
+    border: 1px solid rgba(167, 233, 197, 0.12);
+    border-radius: 30px;
+
+    color: #c4d4c9;
+    font-size: 12px;
+}
+
+.status-dot {
+    width: 7px;
+    height: 7px;
+
+    background: #a7e9c5;
+    border-radius: 50%;
+
+    box-shadow: 0 0 10px #a7e9c5;
+
+    animation: pulse 1.5s infinite;
+}
+
+.construction-footer {
+    margin-top: 35px;
+    padding-top: 20px;
+
+    border-top: 1px solid #242b26;
+
+    color: #626b64;
+    font-size: 10px;
+    letter-spacing: 2px;
+}
+
+@keyframes cardAppear {
+    from {
+        opacity: 0;
+        transform: translateY(15px) scale(0.97);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+    }
+}
+
+@keyframes pulse {
+    0%, 100% {
+        opacity: 1;
+    }
+
+    50% {
+        opacity: 0.35;
+    }
+}
+
+/* Mobile adjustments */
+@media (max-width: 480px) {
+    .construction-card {
+        padding: 40px 22px;
+    }
+
+    .construction-label {
+        font-size: 9px;
+        letter-spacing: 2px;
+    }
+
+    .construction-card p {
+        font-size: 13px;
+    }
+}
+        
     </style>
 </head>
 
 <body>
 
+    <!-- UNDER CONSTRUCTION OVERLAY -->
+<div class="construction-overlay">
+
+    <div class="construction-card">
+
+        <div class="construction-icon">
+            ⚒
+        </div>
+
+        <span class="construction-label">
+            SOMETHING NEW IS COMING
+        </span>
+
+        <h1>
+            Under <span>Construction.</span>
+        </h1>
+
+        <p>
+            I'm working behind the scenes to build something awesome.
+            My portfolio will be ready soon.
+        </p>
+
+        <div class="construction-status">
+            <span class="status-dot"></span>
+            Currently building
+        </div>
+
+        <div class="construction-footer">
+            THANK YOU FOR YOUR PATIENCE
+        </div>
+
+    </div>
+
+</div>
+    
     <!-- NAVIGATION -->
     <nav>
         <a href="#" class="logo">ChamodK<span>.</span></a>
