@@ -11,6 +11,9 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Instrument+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
 
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
     <style>
         /* ---------- BASIC SETTINGS ---------- */
 
@@ -577,6 +580,43 @@
     letter-spacing: 2px;
 }
 
+        /* ---------- SOCIAL ICON BUTTONS ---------- */
+
+.construction-socials {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 12px;
+    margin-top: 28px;
+}
+
+.construction-socials a {
+    width: 44px;
+    height: 44px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background: rgba(167, 233, 197, 0.05);
+    border: 1px solid #303b33;
+    border-radius: 12px;
+
+    color: #a7e9c5;
+    font-size: 17px;
+
+    transition: all 0.3s ease;
+}
+
+.construction-socials a:hover {
+    background: #a7e9c5;
+    border-color: #a7e9c5;
+    color: #080b09;
+
+    transform: translateY(-4px);
+    box-shadow: 0 6px 20px rgba(167, 233, 197, 0.15);
+}
+
 @keyframes cardAppear {
     from {
         opacity: 0;
@@ -647,6 +687,29 @@
             Currently building
         </div>
 
+        <!-- SOCIAL LINKS -->
+<div class="construction-socials">
+
+    <a href="https://www.linkedin.com/in/cmdkau/"
+       target="_blank" rel="noopener noreferrer"
+       aria-label="LinkedIn" title="LinkedIn">
+        <i class="fa-brands fa-linkedin-in"></i>
+    </a>
+
+    <a href="https://www.behance.net/cmdkau"
+       target="_blank" rel="noopener noreferrer"
+       aria-label="Behance" title="Behance">
+        <i class="fa-brands fa-behance"></i>
+    </a>
+
+    <a href="https://github.com/cmdkau"
+       target="_blank" rel="noopener noreferrer"
+       aria-label="GitHub" title="GitHub">
+        <i class="fa-brands fa-github"></i>
+    </a>
+
+</div>
+        
         <div class="construction-footer">
             THANK YOU FOR YOUR PATIENCE
         </div>
@@ -846,13 +909,13 @@
             </p>
 
             <div class="social-links">
-                <a href="https://www.linkedin.com/" target="_blank"
+                <a href="https://www.linkedin.com/in/cmdkau" target="_blank"
                    rel="noopener noreferrer">LinkedIn ↗</a>
 
-                <a href="https://github.com/" target="_blank"
+                <a href="https://github.com/cmdkau" target="_blank"
                    rel="noopener noreferrer">GitHub ↗</a>
 
-                <a href="https://www.behance.net/" target="_blank"
+                <a href="https://www.behance.net/cmdkau" target="_blank"
                    rel="noopener noreferrer">Behance ↗</a>
             </div>
 
