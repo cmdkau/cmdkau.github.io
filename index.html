@@ -14,7 +14,6 @@
     <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
 
-    <link rel="stylesheet" href="styles.css">
 </head>
 
 <body>
@@ -90,16 +89,13 @@
         </ul>
 
         <a href="#contact" class="nav-button">Let's Talk ↗</a>
-        <button class="theme-toggle" type="button" aria-label="Switch to light mode" title="Switch to light mode">
-            <i class="fa-solid fa-sun" aria-hidden="true"></i>
-            <span class="theme-toggle-label">Light mode</span>
-        </button>
     </nav>
 
 
     <!-- HERO -->
     <main>
         <section class="hero container" id="about">
+            <div class="hero-background" id="hero-background" aria-hidden="true"></div>
             <div class="hero-content">
 
                 <div class="availability">
@@ -107,10 +103,10 @@
                     Creative mind. Technical thinking.
                 </div>
 
-                <h1>
-                    Turning ideas<br>
-                    into <span>digital</span><br>
-                    experiences.
+                <h1 class="hero-title">
+                    <span class="hero-title-line">Turning ideas</span>
+                    <span class="hero-title-line">into <span class="hero-highlight">digital</span></span>
+                    <span class="hero-title-line">experiences.</span>
                 </h1>
 
                 <p>
@@ -124,8 +120,8 @@
                         Explore My Work ↗
                     </a>
 
-                    <a href="mailto:chamodk.ict@gmail.com" class="btn btn-secondary">
-                        Get In Touch
+                    <a href="/ChamodKaushalya_0770099070.pdf" class="btn btn-secondary" target="_blank" rel="noopener noreferrer">
+                        View My CV
                     </a>
                 </div>
 
@@ -148,27 +144,27 @@
             <div class="skills-grid">
 
                 <div class="skill-card">
-                    <div class="skill-number">01 / DESIGN</div>
-                    <h3>UI/UX Design</h3>
-                    <p>Intuitive interfaces and meaningful user experiences.</p>
-                </div>
-
-                <div class="skill-card">
-                    <div class="skill-number">02 / VISUALS</div>
+                    <div class="skill-number">01 / VISUALS</div>
                     <h3>Graphic Design</h3>
                     <p>Visual identities, digital artwork, and creative concepts.</p>
                 </div>
 
                 <div class="skill-card">
-                    <div class="skill-number">03 / MOTION</div>
+                    <div class="skill-number">02 / MOTION</div>
                     <h3>Video Editing</h3>
                     <p>Engaging videos, motion graphics, and visual storytelling.</p>
                 </div>
 
                 <div class="skill-card">
-                    <div class="skill-number">04 / 3D</div>
+                    <div class="skill-number">03 / 3D</div>
                     <h3>3D & Animation</h3>
                     <p>Three-dimensional visuals and animated experiences.</p>
+                </div>
+
+                <div class="skill-card">
+                    <div class="skill-number">04 / DESIGN</div>
+                    <h3>UI/UX Design</h3>
+                    <p>Intuitive interfaces and meaningful user experiences.</p>
                 </div>
 
             </div>
@@ -273,9 +269,9 @@
                 © <span id="year"></span> Chamod Kaushalya. Made with creativity.
             </p>
 
-            <div class="footer-actions">
+            <!--div class="footer-actions">
                 <a href="ChamodKaushalya_0770099070.pdf" class="cv-download" target="_blank" rel="noopener noreferrer">View CV <span aria-hidden="true">↗</span></a>
-
+        -->
                 <div class="social-links">
                 <a href="https://www.linkedin.com/in/cmdkau" target="_blank"
                    rel="noopener noreferrer">LinkedIn ↗</a>
@@ -291,34 +287,12 @@
         </div>
     </footer>
 
+    <button class="theme-toggle" type="button" aria-label="Switch to light mode" title="Switch to light mode">
+        <i class="fa-solid fa-sun" aria-hidden="true"></i>
+    </button>
 
-    <!-- AUTOMATIC COPYRIGHT YEAR -->
-    <script>
-        document.getElementById("year").textContent =
-            new Date().getFullYear();
 
-        const themeToggle = document.querySelector(".theme-toggle");
-        const savedTheme = localStorage.getItem("theme");
-
-        if (savedTheme === "light") document.documentElement.dataset.theme = "light";
-
-        function updateThemeToggle() {
-            const isLight = document.documentElement.dataset.theme === "light";
-            const label = isLight ? "Switch to dark mode" : "Switch to light mode";
-            themeToggle.setAttribute("aria-label", label);
-            themeToggle.setAttribute("title", label);
-            themeToggle.querySelector("i").className = isLight ? "fa-solid fa-moon" : "fa-solid fa-sun";
-            themeToggle.querySelector(".theme-toggle-label").textContent = isLight ? "Dark mode" : "Light mode";
-        }
-
-        updateThemeToggle();
-        themeToggle.addEventListener("click", () => {
-            const isLight = document.documentElement.dataset.theme === "light";
-            document.documentElement.dataset.theme = isLight ? "dark" : "light";
-            localStorage.setItem("theme", isLight ? "dark" : "light");
-            updateThemeToggle();
-        });
-    </script>
+    <script type="module" src="/src/main.jsx"></script>
 
 </body>
 </html>

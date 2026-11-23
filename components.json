@@ -1,0 +1,19 @@
+{
+  "$schema": "https://ui.shadcn.com/schema.json",
+  "style": "new-york",
+  "tailwind": {
+    "config": "",
+    "css": "styles.css",
+    "baseColor": "neutral",
+    "cssVariables": false
+  },
+  "rsc": false,
+  "tsx": false,
+  "aliases": {
+    "utils": "@/lib/utils",
+    "components": "@/components"
+  },
+  "registries": {
+    "@react-bits": "https://reactbits.dev/r/{name}.json"
+  }
+}
